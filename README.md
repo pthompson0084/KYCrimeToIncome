@@ -15,12 +15,14 @@ The two datasets are from "United States crime rates by county" (https://www.kag
 
 ### Installing
 1. Clone the project
+```
 bash
 git clone https://github.com/pthompson0084/KYCrimeToIncome.git
 cd KYCrimeToIncome
-
+```
 2. Run the project using maven
+```
 mvn clean package exec:java -Dexec.mainClass=com.teamtreehouse.App
-
+```
 
 
