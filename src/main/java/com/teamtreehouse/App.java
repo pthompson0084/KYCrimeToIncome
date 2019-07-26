@@ -14,10 +14,14 @@ public class App
     public static void main( String[] args ) throws IOException
     {
         System.out.println();
+
+        //A title
         System.out.println("KENTUCKY COUNTY CRIME RATES COMPARED TO COUNTY AVERAGE INCOME " +
                 "AND POVERTY RATES");
         System.out.println("_______________________________________________");
         System.out.println();
+
+        //Variables to hold the data read from the two data sets and get user selection
         List<CrimeDatum> crimeData = new CrimeDataReader(
                 "crime_data_w_population_and_crime_rate.csv").getData();
         List<IncomeDatum> incomeData = new IncomeDataReader(
@@ -25,8 +29,12 @@ public class App
         CrimeIncomeData.UserSelection selection = getUserInput();
         CrimeIncomeData merged = new CrimeIncomeData(crimeData, incomeData, selection);
     }
+
+    //Method to get user selection
     private static CrimeIncomeData.UserSelection getUserInput() {
         System.out.println();
+
+        //User instructions
         System.out.println("Enter the number of your selection:");
         System.out.println();
         System.out.println("1. Alphabetical list of Kentucky counties with average income " +
@@ -38,8 +46,11 @@ public class App
         System.out.println("4. Exit.");
         System.out.print(">  ");
 
+        //Get the user's choice
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
+
+        //Choice made according to UserSelection enumeration in CrimeIncomeData class
         switch(choice) {
             case 1:
                 return CrimeIncomeData.UserSelection.INCOME;

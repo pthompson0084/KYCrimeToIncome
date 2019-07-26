@@ -1,7 +1,7 @@
 package com.teamtreehouse.KyCrime;
-
 //import java.text.ParseException;
 
+//Class for storing and getting individual row data for use in CrimeDataReader class
 public class CrimeDatum {
     private String county;
     private String crimeRate;

@@ -1,5 +1,6 @@
 package com.teamtreehouse.KyIncome;
 
+//Class for storing and getting individual row data for use in IncomeDataReader class
 public class IncomeDatum {
     private String county;
     private String income;

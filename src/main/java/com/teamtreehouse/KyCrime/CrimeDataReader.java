@@ -1,5 +1,6 @@
 package com.teamtreehouse.KyCrime;
 
+//From Apache Commons CSV library
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
@@ -10,11 +11,16 @@ import java.io.Reader;
 //import java.text.ParseException;
 import java.util.ArrayList;
 
+//Read the crime data from the appropriate data set (csv file)
 public class CrimeDataReader {
+
+    //Store CrimeDatum in an ArrayList
     private ArrayList<CrimeDatum> data = new ArrayList<>();
 
     public CrimeDataReader(String fileName) {
         System.out.println("Reading crime rate data");
+
+        //Use Apache Commons CSV library to read in data fields
         try {
             Reader in = new FileReader(fileName);
             Iterable<CSVRecord> records =
@@ -37,6 +43,7 @@ public class CrimeDataReader {
         }*/
     }
 
+    //Get method to return crime data
     public ArrayList<CrimeDatum> getData() {
         return data;
     }

@@ -1,5 +1,6 @@
 package com.teamtreehouse.KyIncome;
 
+//Apache Commons CSV library
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.csv.CSVFormat;
 
@@ -9,9 +10,13 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 
+//Read the income/poverty data from the appropriate data set (csv file)
 public class IncomeDataReader {
+
+    //Store IncomeDatum in an ArrayList
     private ArrayList<IncomeDatum> data = new ArrayList<>();
 
+    //Use Apache Commons CSV library to read in data fields
     public IncomeDataReader(String fileName) {
         System.out.println("Reading income data");
         try {
@@ -34,6 +39,7 @@ public class IncomeDataReader {
         }
     }
 
+    //Get method to return income/poverty data
     public ArrayList<IncomeDatum> getData() {
         return data;
     }
